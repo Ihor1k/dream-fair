@@ -1,0 +1,162 @@
+.service {
+    padding-top: 100px;
+    margin-top: 190px;
+    @media screen and (max-width: 480px) {
+        margin-top: unset;
+    }
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 24px;
+    margin-top: 80px;
+    min-height: 420px;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
+}
+
+.service-card{
+    position: relative;
+    width: 25%;
+    // width: min(340px, 92vw);
+    border: 1px solid var(--primary-grey, #F4F4F4);
+    background: var(--primary-accent, #FADEA8);
+    
+    /* Drop Shadow */
+    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: background .35s ease, box-shadow .35s ease, max-height .45s ease;
+    max-height: 226px;   /* згорнута */
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        max-height: 406px;
+        overflow: unset;
+    }
+  }
+  
+  .service-card:hover{
+    background: #000; /* фон при hover */
+    // box-shadow: 0 24px 60px rgba(0,0,0,.25);
+    max-height: 406px;   /* розгорнута */
+  }
+  
+  .card-track{
+    position: relative;
+    padding: 24px; /* верх трохи більший */
+    min-height: 180px;
+  }
+  
+  /* ====== ІКОНКА ====== */
+  .icon-row{
+    position: absolute;
+    left: 0;
+    right: 0;     /* дає 100% ширини для руху */
+    top: 0;
+    // height: 48px;
+    // display: flex;
+    // align-items: flex-start;
+    position: relative;          /* щоб .icon позиціонувалась від нього */
+  }
+  
+  /* Іконка: старт ліворуч */
+  .icon{
+    position: absolute;
+    left: 0; top: 0;
+    width: 66px; height: 66px;
+    transform-origin: center;
+    transition: left .45s ease, transform .55s ease, opacity .3s ease;
+    will-change: left, transform;
+    @media screen and (max-width: 480px) {
+        left: calc(100% - 66px);
+        transform: scale(.7);
+        opacity: .95; 
+    }
+  }
+  
+  /* При hover: їде вправо і трохи зменшується */
+  .service-card:hover .icon{
+    left: calc(100% - 66px);     /* вся ширина контейнера мінус ширина іконки */
+    transform: scale(.7);
+    opacity: .95;
+  }
+  
+  /* ====== ЗАГОЛОВОК ====== */
+  .service-title{
+    position: absolute;
+    left: 24px;
+    right: 20px;
+    top: 140px; /* 20px + 48px + 14px */
+    margin: 0;
+    color: var(--neutral-black, #000);
+    // margin-top: 40px;
+    // max-width: 270px;
+
+    /* H3 */
+    font-family: "Albert Sans";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 28.6px */
+    text-transform: uppercase;
+    transition: color .35s ease, transform .55s ease, font-size .45s ease, top .45s ease;
+    @media screen and (max-width: 480px) {
+        top: 36px;
+        font-size: 18px;
+    }
+  }
+  
+  .service-card:hover .service-title{
+    top: 36px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  /* ====== ОПИС ====== */
+  .desc{
+    position: relative;
+    margin: 0;
+    color: var(--neutral-white, #FFF);
+
+    /* body medium */
+    font-family: "Albert Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    padding-top: 80px; /* 48px (іконка) + 64px запас */
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .45s ease, transform .55s ease, color .35s ease;
+    @media screen and (max-width: 480px) {
+        opacity: .7;
+        transform: translateY(0);
+        color: #000;
+    }
+  }
+  
+  .service-card:hover .desc{
+    opacity: .7;
+    transform: translateY(0);
+    color: #CFCFCF;
+  }
+  
+  /* glow-підложка при hover */
+  .service-card:hover::after{
+    content:"";
+    position:absolute;
+    left:10%; right:10%; bottom:-14px; height:18px;
+    filter: blur(8px);
+    background: radial-gradient(60% 90% at 50% 0%, rgba(0,0,0,.24), transparent 70%);
+    pointer-events:none;
+  }
+  
+  /* доступність */
+  @media (prefers-reduced-motion: reduce){
+    .service-card, .icon, .service-title, .desc{
+      transition: none !important;
+    }
+  }
+  

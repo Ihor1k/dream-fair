@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamFair</title>
+    <link rel="stylesheet" href="./src/scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <a href="/"
+              ><img
+                src="./src/images/logo.png"
+                width="62"
+                height="52"
+                alt="Logo"
+            /></a>
+          </div>
+          <div class="header-logo-mobile">
+            <a href="/"
+              ><img
+                src="./src/images/header-logo-mobile.png"
+                width="29"
+                height="24"
+                alt="Logo"
+            /></a>
+          </div>
+
+          <div class="burger">
+            <img src="./src/images/burger.svg" alt="" />
+          </div>
+
+          <div class="header-menu">
+            <div class="burger-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  fill="#5C5A5B"
+                />
+              </svg>
+            </div>
+            <a href="#home" class="header-link">Home</a>
+            <a href="#about" class="header-link">About</a>
+            <a href="#services" class="header-link">Services</a>
+            <a href="#challenges" class="header-link">Challenges</a>
+            <a href="#results" class="header-link">Results</a>
+            <a href="#contact" class="header-link">Contact</a>
+          </div>
+
+          <div class="header-buttons mobile-visible">
+            <button class="header-button"><span>Get in Touch</span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup">
+        <div class="popup-inner">
+          <div class="popup-context">
+            <h3>Let’s Talk</h3>
+            <p>
+              We’re here to help you build the brand you’ve always envisioned.
+              Reach out today and let’s discuss how we can support your goals
+            </p>
+          </div>
+
+          <form class="popup-form" id="joinForm">
+            <input type="text" id="name" placeholder="Full Name" required />
+
+            <input type="email" id="email" placeholder="E-mail" required />
+
+            <input
+              type="text"
+              id="company"
+              placeholder="Company/Organizations"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="popup-wrapper">
+              <button type="popup" class="popup-btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <span class="close-popup">&times;</span>
+      </div>
+    </div>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <h1 class="hero-title">
+            Building <br />
+            Brands.<span class="yellow">Driving Growth.</span> Delivering
+            Results.
+          </h1>
+          <div class="rotating-cta">
+            <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
+              <defs>
+                <!-- коло для тексту радіусом 70 -->
+                <path
+                  id="textcircle"
+                  d="M100,100 m-95,0 a95,95 0 1,1 190,0 a95,95 0 1,1 -190,0"
+                />
+              </defs>
+
+              <!-- групу крутимо анімацією -->
+              <g class="text-rotate">
+                <text class="ring-text">
+                  <textPath href="#textcircle" textLength="590" lengthAdjust="spacing" startOffset="0%">
+                    START YOUR PROJECT • START YOUR PROJECT •
+                  </textPath>
+                </text>
+              </g>
+            </svg>
+
+            <button class="center-btn" aria-label="Start your project">
+              <span class="arrow"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="42"
+                  height="43"
+                  viewBox="0 0 42 43"
+                  fill="none"
+                >
+                  <path
+                    d="M8.83887 21.5H33.1614M33.1614 21.5L21.0001 9.33875M33.1614 21.5L21.0001 33.6613"
+                    stroke="#333333"
+                    stroke-width="3.47465"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <img class="about-bg" src="./src/images/about-bg.png" alt="">
+      <img src="./src/images/about-bg-mobile.png" alt="" class="about-bg-mobile">
+      <div class="container">
+        <h2 class="about-title">About</h2>
+        <div class="about-inner">
+          <div class="about-item">
+            <h3 class="about-item-title">Where Ideas Meet Results</h3>
+            <p class="about-text">By merging creativity with data-driven insights, we ensure campaigns are inspiring, effective, and strategically aligned. Each project is approached with balanced thinking and innovative execution, turning marketing activities into measurable business impact. <br>
+              From startups to global enterprises, we deliver clarity, consistency, and visibility that help brands succeed in competitive markets</p>
+          </div>
+        </div>
+        <div class="about-block">
+          <div class="about-item black">
+            <h3 class="about-item-title white">From Vision to Identity</h3>
+            <p class="about-text white">DreamFair is a marketing company that helps businesses unlock potential through branding, advertising, and strategic support. We believe every brand has a meaningful story to tell, and our mission is to shape that story into a clear, powerful identity. <br>
+              With the right creative approach, we make brands resonate with audiences and build lasting connections in today’s fast-changing world</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="service">
+      <div class="container">
+        <div class="content">
+          <h3 class="title">Our Services</h3>
+          <p class="text">We offer comprehensive marketing solutions designed to strengthen brand positioning and drive measurable growth. Each service is tailored to meet the unique challenges of your industry and business goals</p>
+        </div>
+        <div class="service-list">
+          
+          <!-- Картка сервісу -->
+          <div class="service-card">
+            <div class="card-track">
+              <div class="icon-row">
+                <!-- будь-яка іконка/зображення -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <path d="M26.667 43.3333V56.6667M53.3337 36.6667V56.6667M40.0003 23.3333V56.6667M73.3337 40C73.3337 58.4095 58.4098 73.3333 40.0003 73.3333C21.5908 73.3333 6.66699 58.4095 6.66699 40C6.66699 21.5905 21.5908 6.66666 40.0003 6.66666C58.4098 6.66666 73.3337 21.5905 73.3337 40Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <h3 class="service-title">Brand <br> Development</h3>
+
+              <p class="desc">
+                We go beyond logos and visuals to create full-scale brand identities that communicate who you are and what you stand for. Our process ensures consistency across every touchpoint, from design to messaging, building trust and recognition that last
+              </p>
+            </div>
+          </div>
+          
+          <!-- Картка сервісу -->
+          <div class="service-card">
+            <div class="card-track">
+              <div class="icon-row">
+                <!-- будь-яка іконка/зображення -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <path d="M16.6667 60C11.1439 60 6.66675 55.5228 6.66675 50V26C6.66675 20.3995 6.66675 17.5992 7.75668 15.4601C8.71542 13.5785 10.2452 12.0487 12.1268 11.0899C14.266 10 17.0662 10 22.6667 10H57.3334C62.9339 10 65.7342 10 67.8733 11.0899C69.7549 12.0487 71.2847 13.5785 72.2435 15.4601C73.3334 17.5992 73.3334 20.3995 73.3334 26V50C73.3334 55.5228 68.8563 60 63.3334 60M29.0269 70H50.9733C52.7895 70 53.6976 70 54.1559 69.6296C54.5543 69.3077 54.7825 68.8204 54.7748 68.3082C54.7659 67.719 54.1846 67.0214 53.0219 65.6262L42.0487 52.4583C41.3452 51.6141 40.9934 51.192 40.5722 51.038C40.2028 50.903 39.7974 50.903 39.4279 51.038C39.0068 51.192 38.655 51.6141 37.9515 52.4583L26.9783 65.6262C25.8156 67.0214 25.2342 67.719 25.2253 68.3082C25.2176 68.8204 25.4459 69.3077 25.8443 69.6296C26.3026 70 27.2107 70 29.0269 70Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <h3 class="service-title">Advertising <br> Campaigns</h3>
+
+              <p class="desc">
+                Whether digital or traditional, our campaigns are designed to capture attention and generate engagement. We carefully select the right channels, craft compelling messages, and continuously optimize performance to maximize ROI and deliver measurable results
+              </p>
+            </div>
+          </div>
+          
+          <!-- Картка сервісу -->
+          <div class="service-card">
+            <div class="card-track">
+              <div class="icon-row">
+                <!-- будь-яка іконка/зображення -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                  <path d="M73.3334 40C73.3334 58.4095 58.4096 73.3333 40.0001 73.3333M73.3334 40C73.3334 21.5905 58.4096 6.66663 40.0001 6.66663M73.3334 40H66.6668M40.0001 73.3333C21.5906 73.3333 6.66675 58.4095 6.66675 40M40.0001 73.3333V66.6666M6.66675 40C6.66675 21.5905 21.5906 6.66663 40.0001 6.66663M6.66675 40H13.3334M40.0001 6.66663V13.3333M63.5703 63.5702L58.8563 58.8561M21.1439 21.1438L16.4299 16.4297M58.8563 21.1438L63.5703 16.4297M16.4299 63.5702L21.1439 58.8561M26.6667 40L35.0001 35L40.0001 26.6666L45.0001 35L53.3334 40L45.0001 45L40.0001 53.3333L35.0001 45L26.6667 40Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <h3 class="service-title">Marketing <br> Consulting</h3>
+
+              <p class="desc">
+                Our consulting services 
+                bring clarity and focus to brands refining their marketing. We assess existing strategies, reveal hidden gaps, and design actionable roadmaps that align with long-term objectives and evolving market opportunities
+              </p>
+            </div>
+          </div>
+
+          <!-- Картка сервісу -->
+          <div class="service-card">
+            <div class="card-track">
+              <div class="icon-row">
+                <!-- будь-яка іконка/зображення -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <path d="M70 70L58.3337 58.3333M66.6667 38.3333C66.6667 53.9814 53.9814 66.6667 38.3333 66.6667C22.6853 66.6667 10 53.9814 10 38.3333C10 22.6853 22.6853 10 38.3333 10C53.9814 10 66.6667 22.6853 66.6667 38.3333Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              </div>
+
+              <h3 class="service-title">Consumer & <br> Market Researchs</h3>
+
+              <p class="desc">
+                Informed decisions come from reliable insights. We conduct in-depth research to uncover consumer behaviors, market trends, and competitor strategies, translating this knowledge into clear actions that guide smarter, more effective campaigns
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="challenges" class="sol">
+      <div class="container">
+        <div class="content">
+          <h3 class="title">Challenges We Solve</h3>
+          <p class="text">Every business faces obstacles when trying to break through the noise. At DreamFair, we address these challenges head-on with strategies that bring clarity and results.</p>
+        </div>
+
+        <div class="sol-inner">
+          
+          <div class="sol-block">
+            <h3 class="sol-title">Pain Points</h3>
+            <div class="sol-list">
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="#C1C1C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Low Brand Recognition</p>
+              </div>
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="#C1C1C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Unfocused Marketing Efforts</p>
+              </div>
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="#C1C1C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Ineffective Advertisingo</p>
+              </div>
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="#C1C1C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Lack of Market Clarity</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sol-block">
+            <h3 class="sol-title">Solutions</h3>
+            <div class="sol-list">
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                    <path d="M17 1.5L6 12.5L1 7.5" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">We design brands that stand out and 
+                  earn trust</p>
+              </div>
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                    <path d="M17 1.5L6 12.5L1 7.5" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Our consulting ensures strategies align with business goals</p>
+              </div>
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                    <path d="M17 1.5L6 12.5L1 7.5" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Campaigns built on creativity and analytics maximize ROI</p>
+              </div>
+              <div class="sol-item">
+                <div class="sol-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
+                    <path d="M17 1.5L6 12.5L1 7.5" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <p class="sol-text">Research-driven insights empower confident 
+                  decision-making</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="result">
+      <div class="container">
+        <div class="content">
+          <h3 class="title">Results That Matter</h3>
+          <p class="text">At DreamFair, results are real outcomes clients can measure. We deliver strategies that boost visibility, strengthen market position, and, with data-driven creativity, drive growth, engagement, and loyalty</p>
+        </div>
+
+        <div class="swiper benefits-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <!-- globe -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <path d="M1.6665 35.0001H68.3332M1.6665 35.0001C1.6665 53.4096 16.5903 68.3334 34.9998 68.3334M1.6665 35.0001C1.6665 16.5906 16.5903 1.66675 34.9998 1.66675M68.3332 35.0001C68.3332 53.4096 53.4093 68.3334 34.9998 68.3334M68.3332 35.0001C68.3332 16.5906 53.4093 1.66675 34.9998 1.66675M34.9998 1.66675C43.3374 10.7946 48.0757 22.6402 48.3332 35.0001C48.0757 47.36 43.3374 59.2056 34.9998 68.3334M34.9998 1.66675C26.6622 10.7946 21.924 22.6402 21.6665 35.0001C21.924 47.36 26.6622 59.2056 34.9998 68.3334" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 class="benefit-title">Stronger Market Presence</h3>
+                <p class="benefit-desc">Brands that stand out and establish authority in their industry</p>
+              </div>
+            </div>
+      
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <!-- heart -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="62" viewBox="0 0 70 62" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.9775 8.11938C28.313 0.328 17.1995 -1.76786 8.84931 5.36671C0.499138 12.5013 -0.676449 24.4299 5.88099 32.868C11.333 39.8837 27.8329 54.6803 33.2407 59.4694C33.8457 60.0052 34.1482 60.2731 34.501 60.3784C34.809 60.4703 35.146 60.4703 35.454 60.3784C35.8068 60.2731 36.1093 60.0052 36.7143 59.4694C42.1221 54.6803 58.6219 39.8837 64.074 32.868C70.6314 24.4299 69.5994 12.4262 61.1057 5.36671C52.612 -1.69281 41.642 0.328 34.9775 8.11938Z" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 class="benefit-title">Higher Engagement</h3>
+                <p class="benefit-desc">Campaigns that connect with the right audiences across every channel</p>
+              </div>
+            </div>
+      
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <!-- bars -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <path d="M21.667 38.3334V51.6668M48.3337 31.6667V51.6668M35.0003 18.3334V51.6668M68.3337 35.0001C68.3337 53.4096 53.4098 68.3334 35.0003 68.3334C16.5908 68.3334 1.66699 53.4096 1.66699 35.0001C1.66699 16.5906 16.5908 1.66675 35.0003 1.66675C53.4098 1.66675 68.3337 16.5906 68.3337 35.0001Z" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 class="benefit-title">Data-Backed Decisions</h3>
+                <p class="benefit-desc">Research and analytics that replace guesswork with clarity</p>
+              </div>
+            </div>
+      
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <!-- bars -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+                    <path d="M7.66667 21V47.6667M22.6667 21V47.6667M39.3333 21V47.6667M54.3333 21V47.6667M1 53L1 55.6667C1 57.5335 1 58.4669 1.36331 59.18C1.68289 59.8072 2.19282 60.3171 2.82003 60.6367C3.53307 61 4.46649 61 6.33333 61H55.6667C57.5335 61 58.4669 61 59.18 60.6367C59.8072 60.3171 60.3171 59.8072 60.6367 59.18C61 58.4669 61 57.5335 61 55.6667V53C61 51.1331 61 50.1997 60.6367 49.4867C60.3171 48.8595 59.8072 48.3495 59.18 48.03C58.4669 47.6667 57.5335 47.6667 55.6667 47.6667H6.33333C4.46649 47.6667 3.53307 47.6667 2.82003 48.03C2.19283 48.3495 1.68289 48.8595 1.36331 49.4867C1 50.1997 1 51.1331 1 53ZM29.843 1.25709L5.17637 6.73857C3.68617 7.06973 2.94107 7.2353 2.38488 7.636C1.8943 7.98943 1.50909 8.46964 1.2705 9.02521C1 9.65507 1 10.4183 1 11.9449L1 15.6666C1 17.5335 1 18.4669 1.36331 19.18C1.68289 19.8072 2.19282 20.3171 2.82003 20.6367C3.53307 21 4.46649 21 6.33333 21H55.6667C57.5335 21 58.4669 21 59.18 20.6367C59.8072 20.3171 60.3171 19.8072 60.6367 19.18C61 18.4669 61 17.5335 61 15.6667V11.9449C61 10.4183 61 9.65507 60.7295 9.02521C60.4909 8.46964 60.1057 7.98943 59.6151 7.636C59.0589 7.23531 58.3138 7.06973 56.8236 6.73857L32.157 1.25709C31.7252 1.16114 31.5093 1.11317 31.2912 1.09404C31.0974 1.07705 30.9026 1.07705 30.7088 1.09404C30.4907 1.11317 30.2748 1.16114 29.843 1.25709Z" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 class="benefit-title">Sustainable 
+                  ROI</h3>
+                <p class="benefit-desc">Marketing investments that continue to generate value over time</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="benefit-card">
+                <div class="benefit-icon">
+                  <!-- bars -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                  <path d="M58.1767 32.9768C57.2507 41.6765 52.3214 49.8289 44.1648 54.5381C30.6132 62.3622 13.2848 57.719 5.46077 44.1674L4.62744 42.724M1.82059 27.0233C2.7466 18.3237 7.6759 10.1713 15.8325 5.46205C29.3841 -2.36198 46.7125 2.28115 54.5366 15.8328L55.3699 17.2762M1.64404 50.2202L4.08421 41.1134L13.191 43.5535M46.8081 16.4467L55.915 18.8869L58.3551 9.78003" stroke="#F2A81A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </div>
+                <h3 class="benefit-title">Long-Term Growth</h3>
+                <p class="benefit-desc">Strategies designed not just for today’s wins, but for tomorrow’s opportunities</p>
+              </div>
+            </div>
+      
+            <!-- Додай ще слайди за потреби... -->
+          </div>
+        </div>
+      
+        <!-- Навігація -->
+        <div class="benefits-nav">
+          <button class="benefits-btn prev" aria-label="Previous">
+            <!-- стрілка ліворуч -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+              <path d="M17.5 7H1.5M1.5 7L7.5 1M1.5 7L7.5 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="benefits-btn next" aria-label="Next">
+            <!-- стрілка праворуч, біла на чорному тлі -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+              <path d="M1.5 7H17.5M17.5 7L11.5 1M17.5 7L11.5 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <img src="./src/images/contact-bg.png" alt="" class="contact-bg">
+      <img src="./src/images/contact-bg-mobile.png" class="contact-bg-mobile" alt="">
+      <div class="container">
+        <div class="contact-block">
+          <h5 class="contact-title">Let’s Build Together</h5>
+          <p class="contact-text">Your brand deserves more than visibility - it deserves impact. Partner with DreamFair and take the next step toward growth that lasts</p>
+          <button class="contact-btn">Start Your Project</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <img src="./src/images/footer-logo.png" width="328" height="58" alt="">
+            <p class="footer-adress">Address: <br> <br>
+              Office 4, 10/F., Kwan Chart Tower No. 6 Tonnochy Road, Wanchai, Hong Kong
+            </p>
+          </div>
+          <div class="footer-right">
+            <div class="footer-menu">
+              
+              <a href="#home" class="footer-link">Home</a>
+              <a href="#about" class="footer-link">About</a>
+              <a href="#services" class="footer-link">Services</a>
+              <a href="#challenges" class="footer-link">Challenges</a>
+              <a href="#results" class="footer-link">Results</a>
+              <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <p class="footer-meil">info@dream-fair.com</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="copy-adress">© 2025 DreamFair Limited.</p>
+          <a href="./src/politic.html" class="privacy">Privacy Policy. All rights reserved</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

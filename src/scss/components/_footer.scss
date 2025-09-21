@@ -1,0 +1,131 @@
+.footer {
+    margin-top: 260px;
+    position: relative;
+    padding-top: 50px;
+    // border-radius: 26px 26px 0 0;
+    background: #000;
+    @media screen and (max-width: 480px) {
+        margin-top: 100px;
+    }
+}
+
+.footer-inner {
+    display: flex;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clamp(8px, 2vw, 20px);
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
+}
+
+.footer-left {
+    width: 50%; 
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+}
+
+.footer-adress {
+    margin-top: 40px;
+    max-width: 325px;
+    width: 100%;
+
+    color: var(--neutral-white, #FFF);
+
+/* body small */
+font-family: "Albert Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+@media screen and (max-width: 480px) {
+    text-align: center;     
+}
+}
+
+.footer-right {
+    margin-top: 25px;
+    width: 60%;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+}
+
+.footer-link {
+    color: var(--neutral-white, #FFF);
+font-family: "Albert Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+text-transform: uppercase;
+
+text-decoration: none;
+}
+
+.footer-meil {
+    display: inline-block;
+    color: var(--neutral-white, #FFF);
+font-family: "Albert Sans";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 66.667% */
+text-transform: uppercase;
+    margin-top: 80px;
+@media screen and (max-width: 480px) {
+    text-align: center;       
+}
+}
+
+.copyright {
+    display: flex;
+    margin-top: 85px;
+    padding-bottom: 27px;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.copy-adress {
+    width: 45.6%;
+    color: var(--neutral-white, #FFF);
+font-family: "Albert Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 166.667% */
+opacity: .6;
+@media screen and (max-width: 480px) {
+    width: 100%;
+    text-align: center;     
+}
+}
+
+.privacy {
+    color: var(--neutral-white, #FFF);
+font-family: "Albert Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 166.667% */
+text-decoration: none;
+opacity: .6;
+}

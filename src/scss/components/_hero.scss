@@ -1,0 +1,75 @@
+.hero {
+    margin-top: 110px;
+}
+
+.hero-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+      justify-content: center; 
+    }
+}
+
+.hero-title {
+    max-width: 940px;
+    width: 100%;
+    color: var(--neutral-black, #000);
+
+    /* H1 */
+    font-family: "Albert Sans";
+    font-size: clamp(44px, 10vw, 108px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 97.2px */
+    letter-spacing: -3.24px;
+    text-transform: uppercase;
+    @media screen and (max-width: 480px) {
+      text-align: center;
+    }
+}
+
+.yellow {
+    color: #F2A81A;
+}
+
+.rotating-cta{
+    position:relative;
+    width:220px; height:220px;
+    display:inline-block;
+    margin-top: 100px;
+    background: transparent;
+  }
+  .ring{ position:absolute; inset:0; overflow: unset;}
+  
+  .ring-text{
+    color: var(--neutral-dark, #333);
+    font-family: 'Roboto';
+    font-size: 27.797px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 36.136px */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    fill: #333;                 /* колір літер */
+  }
+  
+  /* анімація повільного обертання за годинниковою */
+  .text-rotate{
+    animation: spin 12s linear infinite;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;       /* важливо для SVG */
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  
+  .center-btn{
+    position:absolute;
+    left:50%; top:50%;
+    transform: translate(-50%,-50%);
+    width:78px; height:78px;
+    border:0; border-radius:50%;
+    background:#FADEA8;            /* як на макеті */
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+  }
+  

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamFair</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <a href="/"
+              ><img
+                src="./images/logo.png"
+                width="62"
+                height="52"
+                alt="Logo"
+            /></a>
+          </div>
+          <div class="header-logo-mobile">
+            <a href="/"
+              ><img
+                src="./images/header-logo-mobile.png"
+                width="29"
+                height="24"
+                alt="Logo"
+            /></a>
+          </div>
+
+          <div class="burger">
+            <img src="./images/burger.svg" alt="" />
+          </div>
+
+          <div class="header-menu">
+            <div class="burger-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  fill="#5C5A5B"
+                />
+              </svg>
+            </div>
+            <a href="/index.html#home" class="header-link">Home</a>
+            <a href="/index.html#about" class="header-link">About</a>
+            <a href="/index.html#services" class="header-link">Services</a>
+            <a href="/index.html#challenges" class="header-link">Challenges</a>
+            <a href="/index.html#results" class="header-link">Results</a>
+            <a href="/index.html#contact" class="header-link">Contact</a>
+          </div>
+
+          <div class="header-buttons mobile-visible">
+            <button class="header-button"><span>Get in Touch</span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup">
+        <div class="popup-inner">
+          <div class="popup-context">
+            <h3>Let’s Talk</h3>
+            <p>
+              We’re here to help you build the brand you’ve always envisioned.
+              Reach out today and let’s discuss how we can support your goals
+            </p>
+          </div>
+
+          <form class="popup-form" id="joinForm">
+            <input type="text" id="name" placeholder="Full Name" required />
+
+            <input type="email" id="email" placeholder="E-mail" required />
+
+            <input
+              type="text"
+              id="company"
+              placeholder="Company/Organizations"
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="popup-wrapper">
+              <button type="popup" class="popup-btn">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <span class="close-popup">&times;</span>
+      </div>
+    </div>
+
+    <section class="policy">
+        <div class="container">
+            <h3 class="policy-title">Privacy Policy</h3>
+            <p class="policy-subtitle">Effective as of September 08, 2025</p>
+            <p class="policy-text">DreamFair Limited (hereinafter referred to as “we”, “our”, “us” or the “Company”), operating from the website dream-fair.com, is a Hong Kong company with its registered office at Office 4, 10/F., Kwan Chart Tower, No. 6 Tonnochy Road, Wanchai, Hong Kong. The Company is committed to providing marketing, branding, and consulting services.</p>
+
+            <div class="policy-inner">
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">1.</span> Introduction </h6>
+                    <p class="policy-inner-text">This Policy provides an overview of how DreamFair Limited protects the personal data and privacy of individuals who register to use our services (hereinafter referred to as the “Services”).
+                        <br> <br>
+                        We are committed to protecting your privacy and handling your data in an open and transparent manner and in accordance with the European Regulation 2016/679 and the relevant data protection legislation applicable in Hong Kong. The personal data that we collect and process depends on the product or service requested and agreed in each case..</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">2.</span> What We Need </h6>
+                    <p class="policy-inner-text">Our Personal Data Protection Policy governs the use and storage of your data. DreamFair Limited is a Controller of the personal data you provide to us. We only collect basic personal data about you.
+                        <br> <br>
+                        Subscriber’s personal data (meaning any information about You from which You can be personally identified, such as Your name, telephone number or email address, and which is referred to in this Privacy Notice as "Your Information"), will be processed by DreamFair Limited (including its agents and employees), and (where appropriate) our partners and subcontractors in order to be able to provide the full range of the Services to the Subscriber. The Subscriber’s information is collected when the Subscriber fills in a feedback form on the website dream-fair.com..</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">3.</span> Why We Need It </h6>
+                    <p class="policy-inner-text">We need your personal data in order to provide you with the following services:
+                        Contacting the person – collection of authentication data such as name, email, and phone number for the purposes of contacting the person. <br><br>Communicating with the person – collection of email addresses for the purpose of communication with us. <br><br>Legal basis: Data Subject consent, conclusion and performance of the contract..</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">4.</span> Who Receives Your Personal Data </h6>
+                    <p class="policy-inner-text">We disclose your personal data to persons authorized by us to process personal data (i.e., entities we contract to carry out various personal data processing operations on our behalf). Also, if the law obliges us or we have a legal basis to do so, we may disclose your personal data to third-party entities acting as controllers (entities that process data for their own purposes).</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">5.</span> Transfer of Your Personal Data </h6>
+                    <p class="policy-inner-text">Your personal data may be transferred to third countries [i.e., countries outside of the European Economic Area] according to the requirements of data protection legislation applicable. Processors in third countries are obligated to comply with the European data protection standards and to provide appropriate safeguards in relation to the transfer of your data in accordance with GDPR Article 46.</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">6.</span>How Long We Keep Your Personal Information  </h6>
+                    <p class="policy-inner-text">All Personal Data will be kept in a format that allows the Data Subjects to be identified for no longer than is necessary for the purposes for which the personal data are processed. Personal data may be stored for longer periods of time if processed solely for archiving purposes and for reasons of general interest, research, statistics, or the defense of legal rights.</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">7.</span> Your Data Protection Rights  </h6>
+                    <p class="policy-inner-text">
+                        You have the following rights in terms of the personal data we hold about you: <br><br>
+
+                        &#8226; Receive access to your personal data.
+                        &#8226; Request correction of the personal data we hold about you.
+                        &#8226; Request erasure of your personal data (“right to be forgotten”).
+                        &#8226; Object to processing of your personal data where we rely on a legitimate interest.
+                        &#8226; Withdraw consent at any time, without affecting the lawfulness of processing carried out before withdrawal. <br> <br>In the event that you wish to complain about how we handled your personal data, please contact our DPO at: info@dream-fair.com.
+                    </p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">8.</span> Right to Lodge a Complaint </h6>
+                    <p class="policy-inner-text">If after contacting us you still feel that your Personal Data has not been handled appropriately, you can lodge a complaint with the Hong Kong regulator: <br><br>
+
+                        Privacy Commissioner for Personal Data <br>Room 1303, 13/F, Dah Sing Financial Centre <br>248 Queen's Road East, Wanchai, Hong Kong <br><br>
+                        Email: complaints@pcpd.org.hk.</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="orange">9.</span> Changes to This Privacy Policy </h6>
+                    <p class="policy-inner-text">We may modify or amend this Privacy Policy from time to time. We will notify you appropriately when changes are made and will amend the revision date at the top of this page. We encourage you to review this Policy periodically to stay informed about how we process and protect your personal information.</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="footer-left">
+              <img src="./images/footer-logo.png" width="328" height="58" alt="">
+              <p class="footer-adress">Address: <br> <br>
+                Office 4, 10/F., Kwan Chart Tower No. 6 Tonnochy Road, Wanchai, Hong Kong
+              </p>
+            </div>
+            <div class="footer-right">
+              <div class="footer-menu">
+                
+                <a href="/index.html#home" class="footer-link">Home</a>
+                <a href="/index.html#about" class="footer-link">About</a>
+                <a href="/index.html#services" class="footer-link">Services</a>
+                <a href="/index.html#challenges" class="footer-link">Challenges</a>
+                <a href="/index.html#results" class="footer-link">Results</a>
+                <a href="/index.html#contact" class="footer-link">Contact</a>
+              </div>
+              <p class="footer-meil">info@dream-fair.com</p>
+            </div>
+          </div>
+          <div class="copyright">
+            <p class="copy-adress">© 2025 DreamFair Limited.</p>
+            <a href="./politic.html" class="privacy">Privacy Policy. All rights reserved</a>
+          </div>
+        </div>
+      </footer>
+  
+    <script type="module" src="./main.js"></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

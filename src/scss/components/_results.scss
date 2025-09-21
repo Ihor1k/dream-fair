@@ -1,0 +1,121 @@
+.result {
+    padding-top: 100px;
+    margin-top: 160px;
+    @media screen and (max-width: 480px) {
+        margin-top: unset;
+    }
+}
+
+.benefits-swiper {
+    margin-top: 80px;
+}
+
+.swiper-wrapper {
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        transform: unset;
+        gap: 24px;
+    }
+}
+
+.swiper-slide {
+    width: 100% !important;
+    margin-right: unset;
+}
+
+.benefit-card {
+    padding: 24px;
+    background: var(--primary-grey, #F4F4F4);
+
+    /* Drop Shadow */
+    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.07);
+    transition: all 400ms linear;
+    @media screen and (max-width: 480px) {
+        background: var(--neutral-black, #000);
+    }
+}
+
+.benefit-card:hover {
+    background: var(--neutral-black, #000);
+}
+
+.benefit-card:hover .benefit-title, .benefit-card:hover .benefit-desc {
+    color: #fff;
+}
+
+.benefit-icon svg path {
+    transition: all 200ms ease;
+    @media screen and (max-width: 480px) {
+        stroke: rgba(255, 255, 255, 0.47);
+    }
+}
+
+.benefit-card:hover .benefit-icon svg path {
+    stroke: rgba(255, 255, 255, 0.47);
+}
+
+.benefit-title {
+    color: var(--neutral-white, #000);
+
+    /* H3 */
+    font-family: "Albert Sans";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 28.6px */
+    text-transform: uppercase;
+    max-width: 261px;
+    width: 100%;
+    margin: 40px 0 16px 0;
+    transition: all 400ms linear;
+    @media screen and (max-width: 480px) {
+      color: #fff;
+    }
+}
+
+.benefit-desc {
+    color: var(--neutral-black, #000);
+
+    /* body medium */
+    font-family: "Albert Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    opacity: .7;
+    transition: all 400ms linear;
+    @media screen and (max-width: 480px) {
+        color: #fff;
+    }
+}
+
+.benefits-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: stretch;
+    margin-top: 40px;
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+}
+
+.benefits-btn {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: var(--neutral-black, #000);
+    border: 1px solid #000;
+    transition: all 300ms linear;
+}
+
+.benefits-btn:hover svg path {
+    stroke: #7F7F7F;
+}
+
+.benefits-btn:hover {
+    border: 1px solid var(--neutral-grey, #7F7F7F);
+    background: #fff;
+}

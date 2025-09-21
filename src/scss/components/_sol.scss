@@ -1,0 +1,95 @@
+.sol {
+    padding-top: 100px;
+    margin-top: 160px;
+    @media screen and (max-width: 480px) {
+        margin-top: unset;
+    }
+}
+
+.sol-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding: 60px;
+    background: var(--primary-grey, #F4F4F4);
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 60px;
+      padding: 60px 24px;
+    }
+}
+
+.sol-block {
+    width: 49%;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.sol-title {
+    color: var(--neutral-dark, #333);
+font-family: "Albert Sans";
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 28.6px */
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.sol-icon svg path {
+    transition: 300ms all linear;
+}
+
+.sol-block:hover .sol-icon svg path {
+    stroke: #F2A81A;
+}
+
+.sol-text {
+    color: var(--neutral-black, #000);
+
+    /* body medium */
+    font-family: "Albert Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    // max-width: 500px;
+    // width: 100%;
+}
+
+.sol-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 24px 0;
+    position: relative; /* щоб ::after прив’язався */
+  }
+  
+  /* лінія */
+  .sol-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #C2C2C2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+    @media screen and (max-width: 480px) {
+        transform: scale(1);
+    }
+  }
+  
+  /* коли наводимо на весь блок */
+  .sol-block:hover .sol-item::after {
+    transform: scaleX(1);
+  }
+  
+  /* можна зробити затримку для ефекту "по черзі" */
+  .sol-block:hover .sol-item:nth-child(1)::after { transition-delay: 0.1s; }
+  .sol-block:hover .sol-item:nth-child(2)::after { transition-delay: 0.3s; }
+  .sol-block:hover .sol-item:nth-child(3)::after { transition-delay: 0.5s; }
+  .sol-block:hover .sol-item:nth-child(4)::after { transition-delay: 0.7s; }
