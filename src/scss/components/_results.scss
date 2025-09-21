@@ -19,13 +19,16 @@
 }
 
 .swiper-slide {
-    width: 100% !important;
-    margin-right: unset;
+    @media screen and (max-width: 480px) {
+        width: 100% !important;
+        margin-right: unset;  
+    }
+    
 }
 
 .benefit-card {
     padding: 24px;
-    background: var(--primary-grey, #F4F4F4);
+    background: #F4F4F4;
 
     /* Drop Shadow */
     box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.07);
